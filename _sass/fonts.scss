@@ -1,0 +1,34 @@
+@mixin font($path, $family, $weight: normal, $style: normal, $range...) {
+  @font-face {
+    font: {
+      display: fallback;
+      family: $family;
+      weight: $weight;
+      style: $style;
+    }
+    @if length($range) > 0 {
+      unicode-range: $range;
+    }
+    src: url($path);
+  }
+}
+
+:lang(ckb) {
+  font-family: 'Noto Naskh Arabic';
+}
+
+
+@include font("fonts/cmunrm.woff2", "CMU Serif", normal, normal, U+0-10FFFF);
+@include font("fonts/-cmunrm.woff2", "CMU Serif", normal, normal, U+20-7E,U+A0-FF,U+17F,U+200-2FF,U+627,U+62F,U+644,U+646,U+649,U+2010-201F,U+2122,U+1F4D6);
+@include font("fonts/cmunti.woff2", "CMU Serif", normal, italic, U+0-10FFFF);
+@include font("fonts/-cmunti.woff2", "CMU Serif", normal, italic, U+20-7E,U+A0-FF,U+17F,U+200-2FF,U+627,U+62F,U+644,U+646,U+649,U+2010-201F,U+2122,U+1F4D6);
+@include font("fonts/cmunbx.woff2", "CMU Serif", bold, normal, U+0-10FFFF);
+@include font("fonts/-cmunbx.woff2", "CMU Serif", bold, normal, U+20-7E,U+A0-FF,U+17F,U+200-2FF,U+627,U+62F,U+644,U+646,U+649,U+2010-201F,U+2122,U+1F4D6);
+@include font("fonts/cmunbi.woff2", "CMU Serif", bold, italic, U+0-10FFFF);
+@include font("fonts/-cmunbi.woff2", "CMU Serif", bold, italic, U+20-7E,U+A0-FF,U+17F,U+200-2FF,U+627,U+62F,U+644,U+646,U+649,U+2010-201F,U+2122,U+1F4D6);
+@include font("fonts/cmuntt.woff2", "CMU Typewriter Text", normal, normal, U+0-10FFFF);
+@include font("fonts/-cmuntt.woff2", "CMU Typewriter Text", normal, normal, U+20-7E,U+A0-FF,U+17F,U+200-2FF,U+627,U+62F,U+644,U+646,U+649,U+2010-201F,U+2122,U+1F4D6);
+@include font("fonts/Symbola.woff2", "Symbola", normal, normal, U+0-10FFFF);
+@include font("fonts/-Symbola.woff2", "Symbola", normal, normal, U+20-7E,U+A0-FF,U+17F,U+200-2FF,U+627,U+62F,U+644,U+646,U+649,U+2010-201F,U+2122,U+1F4D6);
+@include font("fonts/NotoNaskhArabic-Regular.woff2", "Noto Naskh Arabic", normal, normal, U+0-10FFFF);
+@include font("fonts/-NotoNaskhArabic-Regular.woff2", "Noto Naskh Arabic", normal, normal, U+20-7E,U+A0-FF,U+17F,U+200-2FF,U+627,U+62F,U+644,U+646,U+649,U+2010-201F,U+2122,U+1F4D6);
