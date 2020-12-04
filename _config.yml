@@ -6,6 +6,6 @@ github: xevion
 highlighter: rouge
 plugins:
   - jekyll-feed
-  exclude:x
+exclude:
     - CNAME
     - LICENSE
