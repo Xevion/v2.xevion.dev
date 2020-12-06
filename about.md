@@ -14,7 +14,7 @@ Worlds and Story really appeal to me.
 
 You can check out my photography portfolio [here][photography-portfolio].
 
-<small>This site is a refactored and simplified version of [Delan Abazani's][delan-azabani] personal blog site.</small>
+<small>This site is a refactored and simplified version of [Delan Azabani's][delan-azabani] personal blog site.</small>
 
 
 
