@@ -9,14 +9,14 @@ applying to colleges in order to major in Computer Science. While relatively ine
 in Computer Science and put a great deal of my time and energy into it.
 
 Outside of Computer Science, I really love photography. For me, it combines artistic release with the precision of digital work.
-I also like videogames like RimWorld, Factorio, Modded Minecraft and The Witcher 3. Automation, Base Building, Open
+I also enjoy videogames like RimWorld, Factorio, Modded Minecraft and The Witcher 3. Automation, Base Building, Open
 Worlds and Story really appeal to me.
 
 You can check out my photography portfolio [here][photography-portfolio].
 
----
+<small>This site is a refactored and simplified version of [Delan Abazani's][delan-azabani] personal blog site.</small>
 
-This site is a refactored and simplified version of [Delan Abazani's][delan-azabani] personal blog site.
+
 
 [photography-portfolio]: https://www.rcw.photos/
 [delan-azabani]: https://www.azabani.com
