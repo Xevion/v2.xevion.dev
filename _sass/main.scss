@@ -1,4 +1,4 @@
-::selection {
+ ::selection {
   background: black;
   color: white;
 }
@@ -229,4 +229,8 @@ nav a {
 
 .post_image_full {
   width: 100%;
+}
+
+html, body {
+  visibility: visible !important;
 }

@@ -1,3 +1,6 @@
+---
+layout: compress
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,6 +36,11 @@
     <meta name="twitter:card" content="summary">
     {%- endif -%}
     {%- endif %}
+    <style>
+        html, body {
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body>
 <header>Ryan Walters</header>
@@ -41,7 +49,6 @@
     <a href="/about/">~/about/</a> :
     <a href="/projects/">~/projects/</a>
 </nav>
-
 {% if page.title %}
     {% if page.date %}
         {% if page._link %}

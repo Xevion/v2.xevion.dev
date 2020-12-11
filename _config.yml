@@ -9,3 +9,5 @@ plugins:
 exclude:
     - CNAME
     - LICENSE
+sass:
+  style: compressed
