@@ -28,6 +28,8 @@ body {
   padding: 0 1em;
   font-family: CMU Serif, serif;
   line-height: 1.5;
+  background: #0e0e0e;
+  color: white;
 }
 
 p, table {
@@ -118,7 +120,7 @@ pre code {
 }
 
 a, hr {
-  color: black;
+  color: white;
 }
 
 hr {
@@ -182,7 +184,7 @@ nav {
 }
 
 nav a {
-  color: black;
+  color: white;
 }
 
 .post_summary {
@@ -231,6 +233,7 @@ nav a {
   width: 100%;
 }
 
+// Show site with proper CSS styling
 html, body {
   visibility: visible !important;
 }

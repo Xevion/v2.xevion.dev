@@ -1,0 +1,19 @@
+---
+layout: default
+medium_zoom: true
+wide: true
+---
+
+{{ content }}
+
+<div class="media-grid">
+    {% for photo in page.photos %}
+    <figure class="photo">
+        <img
+                data-zoomable
+                loading="lazy"
+                src="{{ site.baseurl }}/assets/img/{{ photo }}.jpg"
+                alt="..."/>
+    </figure>
+    {% endfor %}
+</div>

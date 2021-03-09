@@ -8,7 +8,7 @@ layout: compress
     <meta name="viewport" content="width=device-width">
     <link rel="preload" as="style" href="/assets/main.css">
     <link rel="stylesheet" href="/assets/main.css">
-<!--    <link rel="stylesheet" href="/assets/print.css" media="print">-->
+    <!--    <link rel="stylesheet" href="/assets/print.css" media="print">-->
     <link rel="stylesheet" href="/assets/rouge.css">
     <title>
         {%- if page.title %}
@@ -36,10 +36,16 @@ layout: compress
     <meta name="twitter:card" content="summary">
     {%- endif -%}
     {%- endif %}
+    <!-- Hide site using inline styling until CSS loads -->
     <style>
         html, body {
             visibility: hidden;
         }
+        {% if page.wide or layout.wide %}
+        body {
+            max-width: 60em !important;
+        }
+        {% endif %}
     </style>
 </head>
 <body>
@@ -50,19 +56,19 @@ layout: compress
     <a href="/projects/">~/projects/</a>
 </nav>
 {% if page.title %}
-    {% if page.date %}
-        {% if page._link %}
-            <h1>
-                <a href="{{ page._link }}">
-                    {{ page.title }}
-                </a>
-            </h1>
-        {% else %}
-            <h1>{{ page.title }}</h1>
-        {% endif %}
-    {% else %}
-        <h1>{{ page.title }}</h1>
-    {% endif %}
+{% if page.date %}
+{% if page._link %}
+<h1>
+    <a href="{{ page._link }}">
+        {{ page.title }}
+    </a>
+</h1>
+{% else %}
+<h1>{{ page.title }}</h1>
+{% endif %}
+{% else %}
+<h1>{{ page.title }}</h1>
+{% endif %}
 {% endif %}
 
 {% if page.date %}
@@ -78,10 +84,20 @@ layout: compress
 </i>
     {% endif %}
     <article>
-
         {{ content }}
-
     </article>
 <p>
+    {% if page.custom_js %}
+    {% for file in page.custom_js %}
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ file }}"></script>
+    {% endfor %}
+    {% endif %}
+    {% if layout.medium_zoom %}
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"
+            integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        mediumZoom('[data-zoomable]', {background: "#0e0e0e"})
+    </script>
+    {% endif %}
 </body>
 </html>
