@@ -1,10 +1,10 @@
- ::selection {
-  background: black;
+::selection {
+  background: #606060;
   color: white;
 }
 
 ::-moz-selection {
-  background: black;
+  background: #606060;
   color: white;
 }
 
@@ -20,10 +20,11 @@ img {
 html {
   overflow-y: scroll;
   font-size: 16pt;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  max-width: 42em;
+  max-width: 46em;
   margin: 1em auto 2em auto;
   padding: 0 1em;
   font-family: CMU Serif, serif;
@@ -197,7 +198,7 @@ nav a {
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-  border: thin solid black;
+  border: thin solid white;
   border-width: thin 0;
   padding: 0.25em 0;
 }
