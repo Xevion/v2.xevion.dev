@@ -2,11 +2,8 @@
 layout: default
 title:  Project Facelift, New and Old
 date:   2021-02-25 16:41:41 -0600
-tags: photography update
+tags:   projects photography update
 ---
-
-To be honest, I haven't been keeping up with any of my projects and I've grown complacent when it comes to Software Engineering. I'm not progressing,
-and I can feel that part of me wasting away, so I wouldn't look to this post for a grand new project or anything.
 
 Through December, I decided to make heavy visual changes to many of my biggest projects, creating custom banners, of which I am quite proud...
 
