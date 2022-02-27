@@ -41,6 +41,7 @@ layout: compress
         html, body {
             visibility: hidden;
         }
+
         {% if page.wide or layout.wide %}
         body {
             max-width: 60em !important;
@@ -55,6 +56,8 @@ layout: compress
     <a href="/about/">~/about/</a> :
     <a href="/projects/">~/projects/</a>
 </nav>
+{% if page.hide_header or layout.hide_header %}
+{% else %}
 {% if page.title %}
 {% if page.date %}
 {% if page._link %}
@@ -68,6 +71,7 @@ layout: compress
 {% endif %}
 {% else %}
 <h1>{{ page.title }}</h1>
+{% endif %}
 {% endif %}
 {% endif %}
 
