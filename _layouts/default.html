@@ -3,105 +3,110 @@ layout: compress
 ---
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="preload" as="style" href="/assets/main.css">
-    <link rel="stylesheet" href="/assets/main.css">
-    <!--    <link rel="stylesheet" href="/assets/print.css" media="print">-->
-    <link rel="stylesheet" href="/assets/rouge.css">
-    <title>
-        {%- if page.title %}
-        {{- page.title -}}{{- " " -}}|{{- " " -}}
-        {%- endif -%}
-        {{- site.title -}}
-    </title>
-    <link rel="preload" as="font" crossorigin href="/assets/fonts/-cmunrm.woff2">
-    <link rel="preload" as="font" crossorigin href="/assets/fonts/-cmuntt.woff2">
-    <link rel="preload" as="font" crossorigin href="/assets/fonts/-cmunti.woff2">
-    <link rel="alternate" type="application/atom+xml" href="/feed.xml">
-    {% if page.date -%}
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ page.url | absolute_url }}">
-    <meta property="og:title" content="{{ page.title }}">
-    <meta name="twitter:title" content="{{ page.title }}">
-    {% if page._preview_description -%}
-    <meta property="og:description" content="{{ page._preview_description }}">
-    <meta property="twitter:description" content="{{ page._preview_description }}">
-    {% endif -%}{%- if page._preview_image -%}
-    <meta property="og:image" content="{{ page._preview_image | absolute_url }}">
-    <meta name="twitter:image" content="{{ page._preview_image | absolute_url }}">
-    <meta name="twitter:card" content="summary_large_image">
-    {%- else -%}
-    <meta name="twitter:card" content="summary">
-    {%- endif -%}
-    {%- endif %}
-    <!-- Hide site using inline styling until CSS loads -->
-    <style>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width" name="viewport">
+        <link as="style" href="/assets/main.css" rel="preload">
+        <link href="/assets/main.css" rel="stylesheet">
+        <!--    <link rel="stylesheet" href="/assets/print.css" media="print">-->
+        <link href="/assets/rouge.css" rel="stylesheet">
+        <title>
+            {%- if page.title %}
+                {{- page.title -}}{{- " " -}}|{{- " " -}}
+            {%- endif -%}
+            {{- site.title -}}
+        </title>
+        <link as="font" crossorigin href="/assets/fonts/-cmunrm.woff2" rel="preload">
+        <link as="font" crossorigin href="/assets/fonts/-cmuntt.woff2" rel="preload">
+        <link as="font" crossorigin href="/assets/fonts/-cmunti.woff2" rel="preload">
+        <link href="/feed.xml" rel="alternate" type="application/atom+xml">
+        {% if page.date -%}
+            <meta content="website" property="og:type">
+            <meta property="og:url" content="{{ page.url | absolute_url }}">
+            <meta property="og:title" content="{{ page.title }}">
+            <meta name="twitter:title" content="{{ page.title }}">
+            {% if page._preview_description -%}
+                <meta property="og:description" content="{{ page._preview_description }}">
+                <meta property="twitter:description" content="{{ page._preview_description }}">
+            {% endif -%}
+            {%- if page._preview_image -%}
+                <meta property="og:image" content="{{ page._preview_image | absolute_url }}">
+                <meta name="twitter:image" content="{{ page._preview_image | absolute_url }}">
+                <meta content="summary_large_image" name="twitter:card">
+            {%- else -%}
+                <meta content="summary" name="twitter:card">
+            {%- endif -%}
+        {%- endif %}
+        <!-- Hide site using inline styling until CSS loads -->
+        <style>
         html, body {
             visibility: hidden;
         }
 
         {% if page.wide or layout.wide %}
-        body {
-            max-width: 60em !important;
-        }
+            body {
+                max-width: 60em !important;
+            }
         {% endif %}
     </style>
-</head>
-<body>
-<header>Ryan Walters</header>
-<nav>
-    <a href="/">~/</a> :
-    <a href="/about/">~/about/</a> :
-    <a href="/projects/">~/projects/</a>
-</nav>
-{% if page.hide_header or layout.hide_header %}
-{% else %}
-{% if page.title %}
-{% if page.date %}
-{% if page._link %}
-<h1>
-    <a href="{{ page._link }}">
-        {{ page.title }}
-    </a>
-</h1>
-{% else %}
-<h1>{{ page.title }}</h1>
-{% endif %}
-{% else %}
-<h1>{{ page.title }}</h1>
-{% endif %}
-{% endif %}
-{% endif %}
+    </head>
+    <body>
+        <header>Ryan Walters</header>
+        <nav>
+            <a href="/">~/</a>
+            :
+            <a href="/about/">~/about/</a>
+            :
+            <a href="/projects/">~/projects/</a>
+        </nav>
+        {% if page.hide_header or layout.hide_header %}
+            {% else %}
+                {% if page.title %}
+                    {% if page.date %}
+                        {% if page._link %}
+                            <h1>
+                                <a href="{{ page._link }}">
+                                    {{ page.title }}
+                                </a>
+                            </h1>
+                        {% else %}
+                            <h1>{{ page.title }}</h1>
+                        {% endif %}
+                    {% else %}
+                        <h1>{{ page.title }}</h1>
+                    {% endif %}
+                {% endif %}
+        {% endif %}
 
-{% if page.date %}
-<p><i>
-    <a href="{{ page.url }}">
-        <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%SZ' }}">
-            {{- page.date | date: '%Y-%m-%d %H:%M %Z' -}}
-        </time>
-    </a>
-    {%- for tag in page.tags -%}
-    {{- " " -}}{{- tag -}}
-    {%- endfor -%}
-</i>
-    {% endif %}
-    <article>
-        {{ content }}
-    </article>
-<p>
-    {% if page.custom_js %}
-    {% for file in page.custom_js %}
-    <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ file }}"></script>
-    {% endfor %}
-    {% endif %}
-    {% if layout.medium_zoom %}
-    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"
-            integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        mediumZoom('[data-zoomable]', {background: "#0e0e0e"})
-    </script>
-    {% endif %}
-</body>
+        {% if page.date %}
+            <p>
+                <i>
+                    <a href="{{ page.url }}">
+                        <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%SZ' }}">
+                            {{- page.date | date: '%Y-%m-%d %H:%M %Z' -}}
+                        </time>
+                    </a>
+                    {%- for tag in page.tags -%}
+                        {{- " " -}}{{- tag -}}
+                    {%- endfor -%}
+                </i>
+            {% endif %}
+            <article>
+                {{ content }}
+            </article>
+            <p>
+                {% if page.custom_js %}
+                    {% for file in page.custom_js %}
+                        <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ file }}"></script>
+                    {% endfor %}
+                {% endif %}
+                {% if layout.medium_zoom %}
+                    <script crossorigin="anonymous" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js"></script>
+                    <script type="text/javascript">
+                        mediumZoom("[data-zoomable]", {background: "#0e0e0e"})
+                    </script>
+                {% endif %}
+            </p>
+        </body>
+    </body>
 </html>
