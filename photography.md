@@ -32,7 +32,7 @@ Since then, I've slowly been dedicating myself more and more to photography as a
 I'm not the greatest, but it's a fun hobby, and I hope you like my work. The photos here are only a preview
 and are not updated on any sort of frequency.
 
-<div style="border: thin solid white; border-width: thin 0; padding: 10px;" class="text-center">
-<span style="margin: 25px;">More available at</span>
-<a href="https://www.rcw.photos/"><i><h1 style="margin: 0;">rcw.photos</h1></i></a>
+<div class="text-center callout-section">
+    <span style="margin: 25px;">More available at</span>
+    <h1 style="margin: 0;"><a href="https://www.rcw.photos/"><i>rcw.photos</i></a></h1>
 </div>

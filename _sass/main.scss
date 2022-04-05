@@ -130,6 +130,7 @@ pre {
   background: rgb(25, 25, 25);
   border-radius: 7px;
   padding: 1em;
+
   code {
     font-size: 1em;
     border: 0;
@@ -147,6 +148,7 @@ hr {
   font-size: 1.5em;
   margin: 1rem 0;
   border: none;
+
   &:before {
     display: block;
     text-align: center;
@@ -240,6 +242,7 @@ nav a {
   a {
     text-decoration: none;
   }
+
   .date {
     font-size: 2em;
   }
@@ -247,6 +250,7 @@ nav a {
 
 .post_combo {
   margin-top: 0.75em;
+
   > h2 {
     display: inline;
   }
@@ -295,6 +299,7 @@ figcaption {
   font-size: 70%;
   opacity: 40%;
   padding-left: 0.4em;
+
   a {
     text-decoration: none;
   }
@@ -314,4 +319,10 @@ article {
 
 .text-center {
   text-align: center;
+}
+
+.callout-section {
+  border: solid white;
+  border-width: thin 0;
+  padding: 10px;
 }
