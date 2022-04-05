@@ -3,6 +3,7 @@ layout: default
 title:  Jekyll, GitHub Pages, and Azabani
 date:   2020-12-04 13:16:22 -0600
 tags: jekyll github-pages
+_preview_description: This is my first time trying to create a proper blog, and my second time using GitHub pages. How did it turn out?
 ---
 
 This is my first time trying to create a proper blog, and my second time using GitHub pages, [the first][github-pages-resume] less than 2 weeks earlier.

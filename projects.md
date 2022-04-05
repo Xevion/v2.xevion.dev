@@ -2,6 +2,7 @@
 layout: default
 title: Projects
 permalink: /projects/
+_preview_description: A list of the most developed projects I've made in recent time.
 ---
 
 Here you can find a list of my most developed projects I've made in recent time.

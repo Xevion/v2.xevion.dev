@@ -4,6 +4,7 @@ title: About
 photo: /assets/img/photography/about.jpg
 wide: true
 permalink: /about/
+_preview_description: My name is Ryan Walters and this is my website.
 ---
 
 My name is **Ryan Walters** and this is my website. As the domain shows, my online handle is **Xevion**.

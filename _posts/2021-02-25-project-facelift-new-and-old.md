@@ -3,6 +3,8 @@ layout: default
 title:  Project Facelift, New and Old
 date:   2021-02-25 16:41:41 -0600
 tags:   projects photography update
+_preview_image: https://raw.githubusercontent.com/Xevion/Paths/master/.media/banner.png
+_preview_description: Through December, I decided to make heavy visual changes to many of my biggest projects, creating custom banners, of which I am quite proud...
 ---
 
 Through December, I decided to make heavy visual changes to many of my biggest projects, creating custom banners, of which I am quite proud...

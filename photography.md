@@ -19,6 +19,7 @@ photos:
     - photography/opt/13
     - photography/opt/14
     - photography/opt/15
+_preview_description: Although I am a Software Engineer at my core, I also do photography. Take a look at some of my best work from 2019 to 2021.
 ---
 <br>
 From a young age I accepted that I was a technically inclined person and art was not in my blood...
