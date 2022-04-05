@@ -3,6 +3,8 @@ layout: default
 title:  Runnerspace, Built in Under 30 Hours
 date:   2022-03-29 13:56:22 -0600
 tags:   flask hackathon utsa rowdyhacks projects
+_preview_image: https://raw.githubusercontent.com/Xevion/runnerspace/master/static/embed-banner.png
+_preview_description: I attended Rowdy Hacks 2022 at UTSA, and while I can't say I left smiling, I did create a pretty cool project that I'd like to talk about.
 ---
 
 I attended Rowdy Hacks 2022 at UTSA, and while I can't say I left smiling, I did create a pretty cool project that I'd like to talk about.
