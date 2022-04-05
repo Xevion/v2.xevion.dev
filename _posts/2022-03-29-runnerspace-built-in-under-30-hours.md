@@ -208,7 +208,7 @@ Haha, no, it still doesn't work, and I never found out why. Additionally, the `p
 [abandoned and archived][profanity-filter-github] by its author.
 
 So, to replace it, I simply started looking for a new package that had the same functionality without requiring some kind of
-NLP text-processing module, and I eventually found [`better-profanity`][better-profanity-pypi]. It ended up being a 
+NLP text-processing module, and I eventually found [`better-profanity`][better-profanity-pypi]{: .no-underline}. It ended up being a 
 drop-in replacement, although it seems to have fewer features *and* holes in its profanity detection. But, for now,
 it's good enough.
 

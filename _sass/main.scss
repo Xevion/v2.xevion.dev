@@ -118,6 +118,14 @@ code {
   font-style: normal !important;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
+a > code {
+  color: #90bcff;
+}
+
 code {
   border: 1px solid rgb(150, 150, 150);
   border-radius: 3px;
