@@ -17,7 +17,7 @@ Besides my interest in programming, I'm also pretty [big on photography](/photog
 
 If you ever catch me playing a game, it's probably going to be *[Modded Minecraft][po2k]*, The Witcher 3, Factorio, or RimWorld.
 
-<small>Disclaimer: This site is a refactored and simplified version of [Delan Azabani's][delan-azabani] personal blog site.</small>
+<small>Notice: This site is a refactored and simplified version of [Delan Azabani's][delan-azabani] personal blog site.</small>
 
 [photography-portfolio]: https://www.rcw.photos/
 [delan-azabani]: https://www.azabani.com
