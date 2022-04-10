@@ -3,11 +3,11 @@ environment: production
 email: xevion@xevion.dev
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://xevion.dev" # the base hostname & protocol for your site, e.g. http://example.com
-github: xevion
 highlighter: rouge
 permalink: pretty
 plugins:
   - jekyll-feed
+  - "jekyll-github-metadata"
 exclude:
     - CNAME
     - LICENSE
@@ -17,4 +17,4 @@ compress_html:
   ignore:
     envs: ["development"]
   comments: all
-repository: xevion/xevion.dev
+repository: Xevion/xevion.dev
