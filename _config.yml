@@ -17,3 +17,4 @@ compress_html:
   ignore:
     envs: ["development"]
   comments: all
+repository: xevion/xevion.dev
