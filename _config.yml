@@ -12,3 +12,6 @@ exclude:
     - LICENSE
 sass:
   style: compressed
+compress_html:
+  ignore:
+    envs: ["development"]
