@@ -49,7 +49,9 @@ layout: compress
                 max-width: 60em !important;
             }
         {% endif %}
-    </style>
+        </style>
+        <!--  Prevent FireFox from displaying FOUC with fake script tag.  -->
+        <script>0</script>
     </head>
     <body>
         <header>Ryan Walters</header>
