@@ -6,6 +6,6 @@ A jekyll-based static blog for my personal usage. Styling originally by [Delan A
 
 ```
 bundle install
-jekyll serve  # development
-jekyll build  # production
+bundle exec jekyll serve --config _config.yml,_config_dev.yml
+bundle exec jekyll build
 ```
