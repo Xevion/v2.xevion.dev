@@ -1,0 +1,64 @@
+---
+layout: compress
+---
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width" name="viewport">
+        <link as="style" href="/assets/main.css" rel="preload">
+        <link href="/assets/main.css" rel="stylesheet">
+        <!-- build-commit-id: {{ site.github.build_revision }} -->
+        <!--    <link rel="stylesheet" href="/assets/print.css" media="print">-->
+        <link href="/assets/rouge.css" rel="stylesheet">
+        <title>
+            {%- if page.title %}
+                {{- page.title -}}{{- " " -}}|{{- " " -}}
+            {%- endif -%}
+            {{- site.title -}}
+        </title>
+        <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+        <link as="font" crossorigin href="/assets/fonts/-cmunrm.woff2" rel="preload">
+        <link as="font" crossorigin href="/assets/fonts/-cmuntt.woff2" rel="preload">
+        <link as="font" crossorigin href="/assets/fonts/-cmunti.woff2" rel="preload">
+        <link href="/feed.xml" rel="alternate" type="application/atom+xml">
+        {% if page._preview_description and page.title or page.name == "index.html" -%}
+            <meta content="website" property="og:type">
+            <meta property="og:url" content="{{ page.url | absolute_url }}">
+            <meta property="og:title" content="{{ page.title | default: "Xevion.dev" }}">
+            <meta name="twitter:title" content="{{ page.title | default: "Xevion.dev" }}">
+            {% if page._preview_description -%}
+                <meta property="og:description" content="{{ page._preview_description }}">
+                <meta property="twitter:description" content="{{ page._preview_description }}">
+            {% endif -%}
+            {%- if page._preview_image -%}
+                <meta property="og:image" content="{{ page._preview_image | absolute_url }}">
+                <meta name="twitter:image" content="{{ page._preview_image | absolute_url }}">
+                <meta content="summary_large_image" name="twitter:card">
+            {%- else -%}
+                <meta content="summary" name="twitter:card">
+            {%- endif -%}
+        {%- endif %}
+        <!-- Hide site using inline styling until CSS loads -->
+        <style>
+        html, body {
+            visibility: hidden;
+        }
+
+        {% if page.wide or layout.wide %}
+            body {
+                max-width: 60em !important;
+            }
+        {% endif %}
+        </style>
+        <!--  Prevent FireFox from displaying FOUC with fake script tag.  -->
+        <script>0</script>
+        {% if page.layout == "posts" %}
+            <script src="/assets/js/custom.js"></script>
+        {% endif %}
+    </head>
+    <body>
+        {{ content }}
+    </body>
+</html>
