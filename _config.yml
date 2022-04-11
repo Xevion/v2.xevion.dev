@@ -8,6 +8,7 @@ permalink: pretty
 plugins:
   - jekyll-feed
   - "jekyll-github-metadata"
+  - jekyll-redirect-from
 exclude:
     - CNAME
     - LICENSE
