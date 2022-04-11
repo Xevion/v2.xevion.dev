@@ -58,13 +58,15 @@ layout: compress
         <script>
             window.onload = () => {
                 let commit = document.querySelector("#commit-id > a");
-                let colorCode = commit.innerHTML.trim().substring(1, 7);
-                commit.addEventListener('mouseover', function handler() {
-                    commit.style.color = `#${colorCode}`;
-                })
-                commit.addEventListener('mouseout', function handler() {
-                    commit.style.color = '';
-                })
+                if (commit != null) {
+                    let colorCode = commit.innerHTML.trim().substring(1, 7);
+                    commit.addEventListener('mouseover', function handler() {
+                        commit.style.color = `#${colorCode}`;
+                    })
+                    commit.addEventListener('mouseout', function handler() {
+                        commit.style.color = '';
+                    })
+                }
             }
         </script>
         {% endif %}
