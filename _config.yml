@@ -9,6 +9,8 @@ plugins:
   - jekyll-feed
   - "jekyll-github-metadata"
   - jekyll-redirect-from
+include:
+  - _pages
 exclude:
     - CNAME
     - LICENSE
@@ -19,3 +21,9 @@ compress_html:
     envs: ["development"]
   comments: all
 repository: Xevion/xevion.dev
+defaults:
+  -
+    scope:
+      path: "_pages"
+    values:
+      permalink: "/:title:output_ext"
