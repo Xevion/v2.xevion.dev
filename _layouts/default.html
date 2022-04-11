@@ -23,7 +23,7 @@ layout: compress
         <link as="font" crossorigin href="/assets/fonts/-cmuntt.woff2" rel="preload">
         <link as="font" crossorigin href="/assets/fonts/-cmunti.woff2" rel="preload">
         <link href="/feed.xml" rel="alternate" type="application/atom+xml">
-        {% if page._preview_description or page._preview_image and page.title or page.name == "index.html" -%}
+        {% if page._preview_description and page.title or page.name == "index.html" -%}
             <meta content="website" property="og:type">
             <meta property="og:url" content="{{ page.url | absolute_url }}">
             <meta property="og:title" content="{{ page.title | default: "Xevion.dev" }}">
