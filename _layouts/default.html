@@ -55,20 +55,7 @@ layout: compress
         <!--  Prevent FireFox from displaying FOUC with fake script tag.  -->
         <script>0</script>
         {% if page.layout == "posts" %}
-        <script>
-            window.onload = () => {
-                let commit = document.querySelector("#commit-id > a");
-                if (commit != null) {
-                    let colorCode = commit.innerHTML.trim().substring(1, 7);
-                    commit.addEventListener('mouseover', function handler() {
-                        commit.style.color = `#${colorCode}`;
-                    })
-                    commit.addEventListener('mouseout', function handler() {
-                        commit.style.color = '';
-                    })
-                }
-            }
-        </script>
+            <script src="/assets/js/custom.js"></script>
         {% endif %}
     </head>
     <body>
