@@ -1,3 +1,4 @@
+// Easter egg feature! 🐣️
 window.onload = () => {
     let commit = document.querySelector("#commit-id > a");
     if (commit != null) {
