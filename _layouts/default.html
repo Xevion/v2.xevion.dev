@@ -54,6 +54,20 @@ layout: compress
         </style>
         <!--  Prevent FireFox from displaying FOUC with fake script tag.  -->
         <script>0</script>
+        {% if page.layout == "posts" %}
+        <script>
+            window.onload = () => {
+                let commit = document.querySelector("#commit-id > a");
+                let colorCode = commit.innerHTML.trim().substring(1, 7);
+                commit.addEventListener('mouseover', function handler() {
+                    commit.style.color = `#${colorCode}`;
+                })
+                commit.addEventListener('mouseout', function handler() {
+                    commit.style.color = '';
+                })
+            }
+        </script>
+        {% endif %}
     </head>
     <body>
         <header>Ryan Walters</header>
