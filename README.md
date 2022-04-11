@@ -16,7 +16,7 @@ A jekyll-based static blog for my personal usage. Styling originally by [Delan A
 bundle install
 bundle exec jekyll serve --config _config.yml,_config_dev.yml
 bundle exec jekyll build
-```
+``` 
 
 [user-url]: https://github.com/Xevion/
 [repo-url]: https://github.com/Xevion/xevion.dev
