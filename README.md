@@ -2,13 +2,13 @@
 
 # xevion.dev
 
-</div>
 
 [![License][license-badge]][license-url]
 [![Website][website-badge]][website-url]
 [![Build Status][build-badge]][latest-url]
 
 A jekyll-based static blog for my personal usage. Styling originally by [Delan Azabani][azabani-repo-url].
+</div>
 
 ## Usage
 
