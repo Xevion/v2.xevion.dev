@@ -1,0 +1,35 @@
+(defattrs :bg-green {:fill "#a0ffa0"})
+(defattrs :bg-yellow {:fill "#ffffa0"})
+(defattrs :bg-pink {:fill "#ffb0a0"})
+(defattrs :bg-cyan {:fill "#a0fafa"})
+(defattrs :bg-purple {:fill "#e4b5f7"})
+
+(defattrs :vertical [:plain {:writing-mode "vertical-rl"}])
+
+(def row-height 70)
+(def boxes-per-row 15)
+
+(draw-column-headers {:stroke "#ffffff"})
+(draw-box (text "Flag" :vertical) :bg-purple)
+(draw-box (text "Command" [:vertical {:font-size 11}]) :bg-cyan)
+(draw-box (text "Address" :math) [{:span 8} :bg-yellow])
+(draw-box (text "Block" :vertical) :bg-pink)
+(draw-box "Data" [{:span 4} :bg-green])
+
+(draw-box 0x61 [:bg-purple {:next-row-height 30}])
+(draw-box 0x21 :bg-cyan)
+
+(draw-box 0xA7 :bg-yellow)
+(draw-box 0x3E :bg-yellow)
+(draw-box 0xFF :bg-yellow)
+(draw-box 0x58 :bg-yellow)
+(draw-box 0x21 :bg-yellow)
+(draw-box 0x32 :bg-yellow)
+(draw-box 0x10 :bg-yellow)
+(draw-box 0xFE :bg-yellow)
+
+(draw-box 0x05 :bg-pink)
+(draw-box 0x11 :bg-green)
+(draw-box 0x22 :bg-green)
+(draw-box 0x33 :bg-green)
+(draw-box 0x44 :bg-green)
