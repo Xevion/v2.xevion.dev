@@ -4,7 +4,7 @@ title:  Restricted Memory & Data Framing Tricks
 date:   2022-07-16 13:51:00 -0500
 tags:   c memory embedded ti msp430 union
 excerpt_separator: <!--more-->
-_preview_description: 
+_preview_description: Tips and tricks I learned about handling restricted memory while working on microcontrollers at my first internship
 ---
 
 Working on microcontrollers is a far cry from the essentially unlimited memory and floating point operations available
@@ -194,6 +194,12 @@ void ReverseEndianness(struct AddressedSingleBlockWrite asbw) {
     }
 }
 ```
+
+### Conclusion
+
+Working in a restricted memory space is not that hard once you get used to the lack of normal functions such as `malloc`
+and `printf`, but balancing performance, power consumption, memory allocation and code quality gets harder the more
+complex your program gets.
 
 [iso15693-diagram]: /assets/img/iso15693_diagram.png
 [iso15693-diagram-edn]: /assets/iso15693_diagram.edn
