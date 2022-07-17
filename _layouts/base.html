@@ -54,7 +54,7 @@ layout: compress
         </style>
         <!--  Prevent FireFox from displaying FOUC with fake script tag.  -->
         <script>0</script>
-        {% if page.layout == "posts" %}
+        {% if page.layout == "default" or page.layout == "posts" %}
             <script src="/assets/js/custom.js"></script>
         {% endif %}
     </head>
