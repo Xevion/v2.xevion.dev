@@ -3,22 +3,11 @@ layout: default
 title:  Restricted Memory & Data Framing Tricks
 date:   2022-07-16 13:51:00 -0500
 tags:   c memory embedded ti msp430 union
-excerpt_separator: <!--more-->
 _preview_description: Tips and tricks I learned about handling restricted memory while working on microcontrollers at my first internship
 ---
 
 Working on microcontrollers is a far cry from the essentially unlimited memory and floating point operations available
 in _Python_ and other high level languages. Here's what I have been learning at my _first_ internship...
-
-<!--more-->
-
-For the past 7 weeks I've been working at **Black Pearl Technology** in a Software Development Internship.
-To be honest, I really wasn't expecting to be getting an internship this summer, and while I was sad about it, I
-was loaded up on summer courses such that I'd have a leisurely fun summer doing what I wanted.
-
-
-Well, fortunately (for my career, not so much for my stress levels), I managed to snag this internship at the last second,
-and I've been learning _so_ much.
 
 ## Restricted Memory
 
