@@ -158,9 +158,9 @@ This will help greatly when it comes to refactoring or making adjustments to you
 If you check out TI's [sloa141][sloa141] PDF on ISO 15693 commands, you'll notice that many of the examples have
 sections of their bytes reversed - sections like the _Address_ and _Data_ sections, but not the entire compiled command.
 
-One such example, `60 21 9080C2E5D2C407E0 06 55443322` (spaces inserted to split it apart), has the _Flag_, _Command_,
-_Address_, _Block_ and _Data_ stored in that order. But for this particular example, how could the address `E007C4D2E5C28090`?
-How could the data be `0x22334455`? It's the Endianness - the order of bytes as the underlying architecture understands it.
+One such example, `60``21``9080C2E5D2C407E0``06``55443322`, has the _Flag_, _Command_,
+_Address_, _Block_ and _Data_ stored in that order. But for this particular example, how could the address be `E007C4D2E5C28090`?
+How could the data be `0x22334455`? This odd ordering has a name - Endianness - the order of bytes as the underlying architecture understands it.
 
 While for my particular usage, reversing endianness was not needed, it's an interesting problem that can  be solved 
 quite easily with our new data structure.
