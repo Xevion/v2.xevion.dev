@@ -9,6 +9,7 @@ plugins:
   - jekyll-feed
   - "jekyll-github-metadata"
   - jekyll-redirect-from
+  - jekyll-sitemap
 include:
   - _pages
 exclude:
