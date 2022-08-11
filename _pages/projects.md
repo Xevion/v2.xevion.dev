@@ -8,7 +8,7 @@ _preview_description: A list of the most developed projects I've made in recent 
 Here you can find a list of my most developed projects I've made in recent time.
 
 [![/Paths/ Banner][paths-banner]][paths]
-* [Paths][paths] - A pathfinding simulation app designed to show off and explore various pathfinding algorithsm and their interactions on a 2D grid.
+* [Paths][paths] - A pathfinding simulation app designed to show off and explore various pathfinding algorithms and their interactions on a 2D grid.
 
 [![/lovely/ Banner][lovely-banner]][lovely]
 * [Lovely][lovely] - A little project I made to play around with javascript game programming and canvases.
