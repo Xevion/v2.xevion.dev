@@ -2,7 +2,6 @@
 layout: about
 title: About
 photo: /assets/img/photography/about.jpg
-wide: true
 permalink: /about/
 _preview_description: My name is Ryan Walters and this is my website.
 ---
