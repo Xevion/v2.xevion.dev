@@ -6,7 +6,7 @@ permalink: /about/
 _preview_description: My name is Ryan Walters and this is my website.
 ---
 
-My name is **Ryan Walters** and this is my website. As the domain shows, my online handle is **Xevion**.
+<span class="tab">My name is **Ryan Walters** and this is my website. As the domain shows, my online handle is **Xevion**.</span>
 
 As of <i>{{ page.last_modified_at | | date: '%B %Y' }}</i>, I'm a Computer Science student studying at UTSA. Contact me if you're interested in working with me!
 
