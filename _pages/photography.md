@@ -4,21 +4,21 @@ title: Photography
 hide_header: true
 permalink: /photography/
 photos:
-    - photography/opt/1
-    - photography/opt/2
-    - photography/opt/3
-    - photography/opt/4
-    - photography/opt/5
-    - photography/opt/6
-    - photography/opt/7
-    - photography/opt/9
-    - photography/opt/8
-    - photography/opt/10
-    - photography/opt/11
-    - photography/opt/12
-    - photography/opt/13
-    - photography/opt/14
-    - photography/opt/15
+    - photography/1
+    - photography/2
+    - photography/3
+    - photography/4
+    - photography/5
+    - photography/6
+    - photography/7
+    - photography/9
+    - photography/8
+    - photography/10
+    - photography/11
+    - photography/12
+    - photography/13
+    - photography/14
+    - photography/15
 _preview_description: Although I am a Software Engineer at my core, I also do photography. Take a look at some of my best work from 2019 to 2021.
 ---
 <br>
