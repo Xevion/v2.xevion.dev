@@ -8,7 +8,7 @@ _preview_description: My name is Ryan Walters and this is my website.
 
 My name is **Ryan Walters** and this is my website. As the domain shows, my online handle is **Xevion**.
 
-As of February 2022, I'm a Computer Science student studying at UTSA. Contact me if you're interested in working with me!
+As of <i>{{ site.time | date: '%B %Y' }}</i>, I'm a Computer Science student studying at UTSA. Contact me if you're interested in working with me!
 
 Software Engineering is one of my favorite things in the world; I adore projects relating to automation, pathfinding, group coordination and more...
 I like working on big projects, APIs, competition/interview problems, and in general - learning how it all works!
