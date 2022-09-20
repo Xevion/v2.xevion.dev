@@ -1,1 +1,1 @@
-bundle exec jekyll serve --config _config.yml,_config_dev.yml --drafts --unpublished
+bundle exec jekyll serve --config _config.yml,_config_dev.yml --drafts --unpublished -I -o
