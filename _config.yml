@@ -13,6 +13,7 @@ plugins:
   - jekyll-last-modified-at
 include:
   - _pages
+  - CNAME
 exclude:
     - CNAME
     - LICENSE
