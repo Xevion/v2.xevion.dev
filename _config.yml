@@ -7,7 +7,7 @@ highlighter: rouge
 permalink: pretty
 plugins:
   - jekyll-feed
-  - "jekyll-github-metadata"
+  - jekyll-github-metadata
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-last-modified-at
