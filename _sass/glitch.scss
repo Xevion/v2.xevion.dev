@@ -1,6 +1,11 @@
-.stack {
-  display: grid;
-  grid-template-columns: 1fr;
+
+header {
+  max-width: 100vw;
+  .stack {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .stack span {
