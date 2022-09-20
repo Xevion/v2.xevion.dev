@@ -10,6 +10,7 @@ plugins:
   - "jekyll-github-metadata"
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-last-modified-at
 include:
   - _pages
 exclude:
