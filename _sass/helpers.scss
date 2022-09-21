@@ -22,3 +22,7 @@ p {
     border-width: thin 0;
     padding: 10px;
 }
+
+body.wide {
+    max-width: 60rem !important;
+}

@@ -30,3 +30,5 @@ defaults:
       path: "_pages"
     values:
       permalink: "/:title:output_ext"
+sass:
+  sourcemap: development

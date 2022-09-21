@@ -45,12 +45,6 @@ layout: compress
         html, body {
             visibility: hidden;
         }
-
-        {% if page.wide or layout.wide %}
-            body {
-                max-width: 60em !important;
-            }
-        {% endif %}
         </style>
         <!--  Prevent FireFox from displaying FOUC with fake script tag.  -->
         <script>0</script>
@@ -58,7 +52,7 @@ layout: compress
             <script src="/assets/js/custom.js"></script>
         {% endif %}
     </head>
-    <body>
+    <body class="{% if page.wide or layout.wide %}wide{% endif %}">
         {{ content }}
     </body>
 </html>
