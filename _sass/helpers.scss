@@ -1,0 +1,24 @@
+span,
+p {
+    &.tab {
+        margin-left: 2em;
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.callout-section {
+    border: solid white;
+    border-width: thin 0;
+    padding: 10px;
+}

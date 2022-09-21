@@ -1,25 +1,22 @@
 @import "glitch";
+@import "mixins";
+@import "helpers";
+@import "code";
 
-::selection {
-  background: #606060;
-  color: white;
-}
-
+// Dark-mode selections
+::selection,
 ::-moz-selection {
-  background: #606060;
-  color: white;
+  background: #444444;
+  color: #ffffff;
 }
 
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-
+// All img tags will use the EXIF data to rotate images
 img {
   image-orientation: from-image;
 }
 
-html, body {
+html,
+body {
   max-width: 100%;
   max-height: 100%;
   width: 100%;
@@ -35,7 +32,7 @@ html {
 
 body {
   padding: 0;
-  font-family: CMU Serif, serif;
+  font-family: "CMU Serif", serif;
   line-height: 1.5;
   background: #0e0e0e;
   color: white;
@@ -58,7 +55,7 @@ header {
   letter-spacing: 0.1em;
 }
 
-@media (max-width: 720px) {
+@include for-size(tablet-portrait-up) {
   header {
     font-size: 3em;
   }
@@ -84,7 +81,7 @@ blockquote:before {
 aside.references:before {
   font-size: 3em;
   margin-top: -0.5rem;
-  font-family: Symbola, serif;
+  font-family: "Symbola", serif;
 
   /* OPEN BOOK in text presentation */
   content: "\1F4D6\FE0E";
@@ -122,42 +119,6 @@ dt {
 
 dd {
   margin-left: 2em;
-}
-
-pre,
-code {
-  font-family: CMU Typewriter Text, monospace, monospace;
-  font-size: 0.75em;
-  font-style: normal !important;
-}
-
-.no-underline {
-  text-decoration: none;
-}
-
-a > code {
-  color: #90bcff;
-}
-
-code {
-  border: 1px solid rgb(150, 150, 150);
-  border-radius: 3px;
-  background-color: rgb(0, 0, 0);
-  padding: 0.15em 0.34em;
-  white-space: nowrap;
-}
-
-pre {
-  background: rgb(25, 25, 25);
-  border-radius: 7px;
-  padding: 1em;
-
-  code {
-    font-size: 1em;
-    border: 0;
-    background-color: transparent !important;
-    white-space: pre-wrap;
-  }
 }
 
 a,
@@ -235,13 +196,13 @@ sup {
 
 nav {
   text-align: center;
-  font-family: CMU Typewriter Text, monospace, monospace;
+  font-family: "CMU Typewriter Text", monospace, monospace;
   font-size: 1.25em;
   color: #808080;
-}
 
-nav a {
-  color: white;
+  a {
+    color: white;
+  }
 }
 
 .post_summary {
@@ -257,9 +218,7 @@ nav a {
   border: thin solid white;
   border-width: thin 0;
   padding: 0.25em 0;
-}
 
-.post_date {
   a {
     text-decoration: none;
   }
@@ -339,19 +298,8 @@ article {
   }
 }
 
-.text-center {
-  text-align: center;
-}
-
-.callout-section {
-  border: solid white;
-  border-width: thin 0;
-  padding: 10px;
-}
-
-
 .build-revision {
-  font-family: CMU Typewriter Text, sans-serif;
+  font-family: "CMU Typewriter Text", sans-serif;
 
   a {
     color: #d2d2d2;
@@ -377,8 +325,7 @@ article {
     }
 
     span {
-      font-family: CMU Typewriter Text, sans-serif;
-
+      font-family: "CMU Typewriter Text", sans-serif;
 
       a {
         text-decoration: none;
@@ -386,14 +333,4 @@ article {
       }
     }
   }
-}
-
-span, p {
-  &.tab {
-    margin-left: 2em;
-  }
-}
-
-.nowrap {
-  white-space: nowrap;
 }
