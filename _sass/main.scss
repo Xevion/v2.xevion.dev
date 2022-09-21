@@ -25,9 +25,26 @@ body {
 }
 
 html {
+  padding: 0;
+  margin: 0;
   overflow-y: scroll;
-  font-size: 16pt;
   text-rendering: optimizeLegibility;
+
+  @include for-size(phone-only) {
+    font-size: 10pt;
+  }
+  @include for-size(tablet-portrait-up) {
+    font-size: 12pt;
+  }
+  @include for-size(tablet-landscape-up) {
+    font-size: 14pt;
+  }
+  @include for-size(desktop-up) {
+    font-size: 16pt;
+  }
+  @include for-size(big-desktop-up) {
+    font-size: 18pt;
+  }
 }
 
 body {
@@ -36,11 +53,15 @@ body {
   line-height: 1.5;
   background: #0e0e0e;
   color: white;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 .body-container {
   max-width: 46em;
-  margin: 0 auto;
+  margin: 0 1em;
 }
 
 p,
@@ -255,7 +276,6 @@ nav {
 html,
 body {
   visibility: visible !important;
-  margin: 0 auto;
 }
 
 small {
