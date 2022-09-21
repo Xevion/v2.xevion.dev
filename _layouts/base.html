@@ -53,6 +53,24 @@ layout: compress
         {% endif %}
     </head>
     <body class="{% if page.wide or layout.wide %}wide{% endif %}">
+
         {{ content }}
     </body>
+    <script type="text/javascript">
+        // Is all of this too much effort to make the animation play in just the right way?
+        window.onbeforeunload = function(){
+            // Remember the origin so it can be checked for page reloadss
+            sessionStorage.setItem("origin", window.location.href);
+        }
+
+        window.onload = function() {
+            // Display the glitch effect on new page loads or reloads.
+            let glitch_seen = sessionStorage.getItem('glitch')
+            if (glitch_seen !== 'true' || window.location.href === sessionStorage.getItem("origin")) {
+                sessionStorage.setItem('glitch', 'true')
+                document.getElementById('header').firstElementChild.classList.add('glitch')
+            }
+            
+        }
+    </script>
 </html>
