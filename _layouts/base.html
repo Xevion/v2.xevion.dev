@@ -8,7 +8,7 @@ layout: compress
         <meta content="width=device-width" name="viewport">
         <link as="style" href="/assets/main.css" rel="preload">
         <link href="/assets/main.css" rel="stylesheet">
-        <!-- build-commit-id: {{ site.github.build_revision }} -->
+        <!-- build-commit-id: {{ site.github.build_revision | default: site.env.GITHUB_SHA }} -->
         <!--    <link rel="stylesheet" href="/assets/print.css" media="print">-->
         <link href="/assets/rouge.css" rel="stylesheet">
         <title>
