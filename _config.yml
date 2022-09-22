@@ -1,5 +1,4 @@
 title: Xevion.dev
-environment: production
 email: xevion@xevion.dev
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://xevion.dev" # the base hostname & protocol for your site, e.g. http://example.com
@@ -16,15 +15,17 @@ include:
   - _pages
   - CNAME
 exclude:
-    - CNAME
-    - LICENSE
+  - LICENSE
 sass:
   style: compressed
   sourcemap: development
-compress_html:
-  ignore:
-    envs: ["development"]
-  comments: all
+# compress_html:
+#   ignore:
+#     envs: [development, production]
+#   comments: all
+#   clippings: all
+#   endings: all
+#   blanklines: false
 repository: Xevion/xevion.dev
 defaults:
   -
