@@ -5,6 +5,9 @@ on:
     branches:
       - master
 
+env:
+  JEKYLL_GITHUB_TOKEN: ${{ secrets.JEKYLL_GITHUB_TOKEN }}
+
 jobs:
   github-pages:
     runs-on: ubuntu-latest
