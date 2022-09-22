@@ -11,6 +11,7 @@ plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-last-modified-at
+  - jekyll-environment-variables
 include:
   - _pages
   - CNAME

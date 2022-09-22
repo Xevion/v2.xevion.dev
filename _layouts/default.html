@@ -60,7 +60,7 @@ layout: base
 <p style="text-align: center;">
     <a href="/feed.xml">Atom</a> |
     <span id="commit-id" class="build-revision"><a
-            href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision }}">
+            href="{{ site.github.repository_url }}/commit/{{ site.github.build_revision | default: site.env.GITHUB_SHA }}">
         #{{ site.github.build_revision | truncate: 7, "" }}
     </a></span>
 </p>
