@@ -16,11 +16,18 @@ A jekyll-based static blog for my personal usage. Styling originally by [Delan A
 bundle install
 bundle exec jekyll serve --config _config.yml,_config_dev.yml
 bundle exec jekyll build
-``` 
+```
+
+## Development Notes
+
+This site uses a special HTML compression layout. This can cause production-only issues as the compression is not used in development. Know the [restrictions][compression-layout-restrictions] of this layout. The primary issue to remember is below.
+
+- Inline javascript (`<script>`) tags with single-line comments (`// Single-line comment`) can break, essentially cause all of the javascript to lay upon one line.
 
 [user-url]: https://github.com/Xevion/
 [repo-url]: https://github.com/Xevion/xevion.dev
 [azabani-repo-url]: https://github.com/delan/www.azabani.com
+[compression-layout-restrictions]: https://jch.penibelst.de/#restrictions
 [website-url]: https://xevion.dev
 [banner-url]: ./assets/img/index-cover.png
 [license-url]: https://github.com/Xevion/xevion.dev/blob/master/LICENSE
