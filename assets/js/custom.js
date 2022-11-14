@@ -1,5 +1,5 @@
 // Easter egg feature! 🐣️
-window.onload = () => {
+setupCommitHover = () => {
     let commit = document.querySelector("#commit-id > a");
     if (commit != null) {
         let colorCode = commit.innerHTML.trim().substring(1, 7);
@@ -10,4 +10,5 @@ window.onload = () => {
             commit.style.color = '';
         })
     }
-}
+};
+window.addEventListener("load", setupCommitHover, true);
