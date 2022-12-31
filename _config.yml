@@ -1,7 +1,7 @@
 title: Xevion.dev
 email: xevion@xevion.dev
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://xevion.dev" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://v2.xevion.dev" # the base hostname & protocol for your site, e.g. http://example.com
 highlighter: rouge
 permalink: pretty
 plugins:
@@ -26,7 +26,7 @@ sass:
 #   clippings: all
 #   endings: all
 #   blanklines: false
-repository: Xevion/xevion.dev
+repository: Xevion/v2.xevion.dev
 defaults:
   -
     scope:

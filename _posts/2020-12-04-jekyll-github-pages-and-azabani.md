@@ -38,5 +38,5 @@ Additionally, the [ISC license][repo-license] has been obeyed, and [you are link
 [github-pages-resume]: https://xevion.github.io/
 [delan-azabani]: https://www.azabani.com/
 [fleurons]: https://en.wikipedia.org/wiki/Fleuron_(typography)
-[repo-license]: https://github.com/Xevion/xevion.dev/blob/fc1761725eb5d4f21bbf778ee504c1e89f9ee9dd/LICENSE#L1
-[about-attribution]: https://github.com/Xevion/xevion.dev/blame/fc1761725eb5d4f21bbf778ee504c1e89f9ee9dd/about.md#L13
+[repo-license]: https://github.com/Xevion/v2.xevion.dev/blob/fc1761725eb5d4f21bbf778ee504c1e89f9ee9dd/LICENSE#L1
+[about-attribution]: https://github.com/Xevion/v2.xevion.dev/blame/fc1761725eb5d4f21bbf778ee504c1e89f9ee9dd/about.md#L13

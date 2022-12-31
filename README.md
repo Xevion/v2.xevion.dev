@@ -1,6 +1,6 @@
 <div align="center">
 
-[<h1>xevion.dev</h1>][website-url]
+[<h1>v2.xevion.dev</h1>][website-url]
 
 
 [![License][license-badge]][license-url]
@@ -25,13 +25,13 @@ This site uses a special HTML compression layout. This can cause production-only
 - Inline javascript (`<script>`) tags with single-line comments (`// Single-line comment`) can break, essentially cause all of the javascript to lay upon one line.
 
 [user-url]: https://github.com/Xevion/
-[repo-url]: https://github.com/Xevion/xevion.dev
+[repo-url]: https://github.com/Xevion/v2.xevion.dev
 [azabani-repo-url]: https://github.com/delan/www.azabani.com
 [compression-layout-restrictions]: https://jch.penibelst.de/#restrictions
-[website-url]: https://xevion.dev
+[website-url]: https://v2.xevion.dev
 [banner-url]: ./assets/img/index-cover.png
-[license-url]: https://github.com/Xevion/xevion.dev/blob/master/LICENSE
-[latest-url]: https://github.com/Xevion/xevion.dev/commit/master
-[license-badge]: https://img.shields.io/github/license/Xevion/xevion.dev
+[license-url]: https://github.com/Xevion/v2.xevion.dev/blob/master/LICENSE
+[latest-url]: https://github.com/Xevion/v2.xevion.dev/commit/master
+[license-badge]: https://img.shields.io/github/license/Xevion/v2.xevion.dev
 [website-badge]: https://img.shields.io/badge/builtwith-jekyll-blue
-[build-badge]: https://github.com/Xevion/xevion.dev/actions/workflows/pages/pages-build-deployment/badge.svg
+[build-badge]: https://github.com/Xevion/v2.xevion.dev/actions/workflows/pages/pages-build-deployment/badge.svg
