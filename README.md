@@ -6,8 +6,7 @@
 [![Website][website-badge]][website-url]
 ![GitHub deployments][build-badge]
 
-
-A jekyll-based static blog for my personal usage. Styling originally by [Delan Azabani][azabani-repo-url].
+A Jekyll-based static blog for my personal usage. Styling originally by [Delan Azabani][azabani-repo-url].
 </div>
 
 ## Usage
@@ -19,6 +18,9 @@ bundle install
 bundle exec jekyll serve --config _config.yml,_config_dev.yml -l -t  # Live reload & debug trace
 bundle exec jekyll build --config _config.yml -t  
 ```
+
+Additionally, `./Launch.ps1` can be used to launch the site
+with `--drafts --unpublished --incremental --open-url --live-reload --trace` enabled.
 
 ## Development Notes
 

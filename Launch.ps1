@@ -1,1 +1,1 @@
-bundle exec jekyll serve --config _config.yml,_config_dev.yml --drafts --unpublished -I -o
+bundle exec jekyll serve --config _config.yml,_config_dev.yml --drafts --unpublished --incremental --open-url --live-reload --trace
