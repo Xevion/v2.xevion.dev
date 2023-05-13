@@ -4,7 +4,8 @@
 
 [![License][license-badge]][license-url]
 [![Website][website-badge]][website-url]
-[![Build Status][build-badge]][latest-url]
+![GitHub deployments][build-badge]
+
 
 A jekyll-based static blog for my personal usage. Styling originally by [Delan Azabani][azabani-repo-url].
 </div>
@@ -48,4 +49,4 @@ is below.
 
 [website-badge]: https://img.shields.io/badge/builtwith-jekyll-blue
 
-[build-badge]: https://github.com/Xevion/v2.xevion.dev/actions/workflows/pages/pages-build-deployment/badge.svg
+[build-badge]: https://img.shields.io/github/deployments/Xevion/v2.xevion.dev/production?label=vercel
