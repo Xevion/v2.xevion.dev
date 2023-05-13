@@ -11,7 +11,7 @@ A Jekyll-based static blog for my personal usage. Styling originally by [Delan A
 
 ## Usage
 
-Note: `Gemfile.lock` generated on Ruby 3.2.2 - delete `Gemfile.lock` for Ruby 2.x support.
+Note: `Gemfile.lock` generated on Ruby 3.2.2 - delete & regenerate `Gemfile.lock` for Ruby 2.x support.
 
 ```bash
 bundle install
@@ -20,7 +20,7 @@ bundle exec jekyll build --config _config.yml -t
 ```
 
 Additionally, `./Launch.ps1` can be used to launch the site
-with `--drafts --unpublished --incremental --open-url --live-reload --trace` enabled.
+with `--drafts --unpublished --incremental --open-url --livereload --trace` enabled.
 
 ## Development Notes
 
