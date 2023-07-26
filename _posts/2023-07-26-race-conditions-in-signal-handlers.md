@@ -3,8 +3,11 @@ layout: default
 title:  Race Conditions in Signal Handlers
 date:   2023-07-26 16:08:12 -0500
 tags:   tar signals interrupt handler process unix race-condition
-_preview_description: Signals offer a unique, low-level way of communicating with processes. But under certain circumstances, they can kill processes, even when they should work.
+_preview_description: Signals offer a unique, low-level way of communicating with processes. But under certain  circumstances, they can kill processes, even when they should work.
 ---
+
+Signals offer a unique, low-level way of communicating with processes. But under certain circumstances, they can kill
+processes, even when they should work.
 
 > This article is a deep dive on a classic race condition issue. If you're hoping for an elegant and interesting article
 > on how I identified a critical vulnerability in `tar`, I'm sorry to say - there's no such vulnerability.
@@ -99,7 +102,8 @@ I am still not sure as to how signal handlers are implemented - I would've assum
 registered at program start, but that doesn't seem to be the case - or at least, Python can beat them to the punch.
 
 Whatever the case, the issue with my implementation is that the signal is sent before the handler is registered, and
-the default behavior of the signal takes over. For many signals, this is to terminate the process.
+the default behavior of the signal takes over. For many signals (including the one[s] I was using), this is to terminate
+the process.
 
 ## How to wait for Signal Handlers
 
