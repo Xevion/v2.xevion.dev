@@ -3,13 +3,11 @@ layout: default
 title:  Race Conditions in Signal Handlers
 date:   2023-07-26 16:08:12 -0500
 tags:   tar signals interrupt handler process unix race-condition
-_preview_description: Signals offer a unique, low-level way of communicating with processes. But under
-certain circumstances, they can kill processes, even when they should work.
+_preview_description: Signals offer a unique, low-level way of communicating with processes. But under certain circumstances, they can kill processes, even when they should work.
 ---
 
 > This article is a deep dive on a classic race condition issue. If you're hoping for an elegant and interesting article
-> on how
-> I identified a critical vulnerability in `tar`, I'm sorry to say - there's no such vulnerability.
+> on how I identified a critical vulnerability in `tar`, I'm sorry to say - there's no such vulnerability.
 
 Signals are a special, but very primitive way for processes to communicate functionality. Signals are useful as they are
 a standardized interface available to 99.99% of programs run on UNIX systems (in existence). Interaction can be done
