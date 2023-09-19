@@ -118,9 +118,8 @@ and of course: *signal handlers*.
 See below, the contents of `/proc/<pid>/status` for a process:
 
 ```
-────────────────────────────────────────────────────────────────────
-        File: /proc/100162/status
-───────┬────────────────────────────────────────────────────────────
+  File: /proc/100162/status
+
    1   │ Name:   Isolated Web Co
    2   │ Umask:  0002
    3   │ State:  S (sleeping)
