@@ -113,7 +113,7 @@ there's a way to check whether signal handlers have been provided or a process.
 
 On Unix systems (which is the only place you're going to find Unix signals), there's a special pseudo-filesystem that
 provides intimate details on a process. This includes things like the process's name, state, PID, memory usage, threads,
-and of course: signal handlers.
+and of course: *signal handlers*.
 
 See below, the contents of `/proc/<pid>/status` for a process:
 
@@ -151,7 +151,7 @@ See below, the contents of `/proc/<pid>/status` for a process:
   43   │ CapPrm: 0000000000000000
 ```
 
-We're interested in SigCgt, which is a bitmask of signals that are caught by the process. The specific bit depends on the platform, but in Python, this can be found in the signal module:
+We're interested in `SigCgt` (line 41), which is a bitmask of signals that are caught by the process. The specific bit depends on the platform, but in Python, this can be found in the signal module:
 
 ```python
 >>> from signal import SIGUSR1
@@ -159,7 +159,7 @@ We're interested in SigCgt, which is a bitmask of signals that are caught by the
 10
 ```
 
-We can parse the SigCgt value using the the `int` function and setting the radix to 16 (hexadecimal).
+We can parse the `SigCgt` value using the the `int` function and setting the radix to 16 (hexadecimal).
 
 ```python
 >>> int("0000000f40800ef8", 16)
@@ -177,7 +177,7 @@ Checking whether or not the Nth bit is set can be done with the bitwise AND oper
 
 If the result is non-zero, the bit is set. If the result is zero, the bit is not set.
 
-By simply polling the process's signal handlers, we can wait for the signal handler to be registered before sending the SIGUSR1 signal.
+By simply polling the process's signal handlers, we can wait for the signal handler to be registered before sending the `SIGUSR1` signal.
 
 Signal handlers are typically registered quickly, and they're
 
