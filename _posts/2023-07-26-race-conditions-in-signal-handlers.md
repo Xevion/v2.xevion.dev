@@ -3,7 +3,8 @@ layout: default
 title:  Race Conditions in Signal Handlers
 date:   2023-07-26 16:08:12 -0500
 tags:   tar signals interrupt handler process unix race-condition
-_preview_description: Signals offer a unique, low-level way of communicating with processes. But under certain  circumstances, they can kill processes, even when they should work.
+_preview_description: Signals offer a unique, low-level way of communicating with processes. But under certain
+circumstances, they can kill processes, even when they should work.
 ---
 
 Signals offer a unique, low-level way of communicating with processes. But under certain circumstances, they can kill
@@ -11,6 +12,7 @@ processes, even when they should work.
 
 > This article is a deep dive on a classic race condition issue. If you're hoping for an elegant and interesting article
 > on how I identified a critical vulnerability in `tar`, I'm sorry to say - there's no such vulnerability.
+> It all boils down to a simple race condition issue.
 
 Signals are a special, but very primitive way for processes to communicate functionality. Signals are useful as they are
 a standardized interface available to 99.99% of programs run on UNIX systems (in existence). Interaction can be done
@@ -95,7 +97,7 @@ when you look into signals, this is the default behavior for processes exited by
 
 ## Signal Handlers Aren't Instant
 
-To my surprise, the handlers that programs like `tar` use aren't available instantly - so much so that even Python
+To my surprise, the handlers that programs like `tar` provide aren't available instantly - so much so that even Python
 can send a signal before they're registered.
 
 I am still not sure as to how signal handlers are implemented - I would've assumed they are static, unchanging, and
@@ -107,7 +109,78 @@ the process.
 
 ## How to wait for Signal Handlers
 
-```TODO```
+Besides just waiting for a second, there's a way to wait for signal handlers to be registered. Or rather,
+there's a way to check whether signal handlers have been provided or a process.
+
+On Unix systems (which is the only place you're going to find Unix signals), there's a special pseudo-filesystem that
+provides intimate details on a process. This includes things like the process's name, state, PID, memory usage, threads,
+and of course: signal handlers.
+
+See below, the contents of `/proc/<pid>/status` for a process:
+
+```
+───────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+       │ File: /proc/100162/status
+───────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1   │ Name:   Isolated Web Co
+   2   │ Umask:  0002
+   3   │ State:  S (sleeping)
+   4   │ Tgid:   100162
+   5   │ Ngid:   0
+   6   │ Pid:    100162
+   7   │ PPid:   6225
+   8   │ TracerPid:  0
+   9   │ Uid:    1000    1000    1000    1000
+  10   │ Gid:    1000    1000    1000    1000
+  11   │ FDSize: 512
+  12   │ Groups: 4 27 123 1000 1001 
+  13   │ NStgid: 100162
+  14   │ NSpid:  100162
+  ...
+  ...
+  ...
+  33   │ CoreDumping:    0
+  34   │ THP_enabled:    1
+  35   │ Threads:    27
+  36   │ SigQ:   0/62382
+  37   │ SigPnd: 0000000000000000
+  38   │ ShdPnd: 0000000000000000
+  39   │ SigBlk: 0000000000000000
+  40   │ SigIgn: 0000000001011002
+  41   │ SigCgt: 0000000f40800ef8 <--- Focus on this line.
+  42   │ CapInh: 0000000000000000
+  43   │ CapPrm: 0000000000000000
+```
+
+We're interested in SigCgt, which is a bitmask of signals that are caught by the process. The specific bit depends on the platform, but in Python, this can be found in the signal module:
+
+```python
+>>> from signal import SIGUSR1
+>>> print(SIGUSR1)
+10
+```
+
+We can parse the SigCgt value using the the `int` function and setting the radix to 16 (hexadecimal).
+
+```python
+>>> int("0000000f40800ef8", 16)
+65506643704
+```
+
+Checking whether or not the Nth bit is set can be done with the bitwise AND operator (`&`) and a bitshift (`<<`).
+
+```python
+>>> sigcgt = int("0000000f40800ef8", 16)
+>>> mask = 1 << (SIGUSR1 - 1)
+>>> sigcgt & mask
+512
+```
+
+If the result is non-zero, the bit is set. If the result is zero, the bit is not set.
+
+By simply polling the process's signal handlers, we can wait for the signal handler to be registered before sending the SIGUSR1 signal.
+
+Signal handlers are typically registered quickly, and they're 
 
 ### Credits
 
