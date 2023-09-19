@@ -118,9 +118,9 @@ and of course: signal handlers.
 See below, the contents of `/proc/<pid>/status` for a process:
 
 ```
-───────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────┬────────────────────────────────────────────────────────────
        │ File: /proc/100162/status
-───────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+───────┼────────────────────────────────────────────────────────────
    1   │ Name:   Isolated Web Co
    2   │ Umask:  0002
    3   │ State:  S (sleeping)
@@ -132,7 +132,7 @@ See below, the contents of `/proc/<pid>/status` for a process:
    9   │ Uid:    1000    1000    1000    1000
   10   │ Gid:    1000    1000    1000    1000
   11   │ FDSize: 512
-  12   │ Groups: 4 27 123 1000 1001 
+  12   │ Groups: 4 27 123 1000 1001
   13   │ NStgid: 100162
   14   │ NSpid:  100162
   ...
@@ -179,7 +179,7 @@ If the result is non-zero, the bit is set. If the result is zero, the bit is not
 
 By simply polling the process's signal handlers, we can wait for the signal handler to be registered before sending the SIGUSR1 signal.
 
-Signal handlers are typically registered quickly, and they're 
+Signal handlers are typically registered quickly, and they're
 
 ### Credits
 
@@ -187,5 +187,4 @@ Credit to [Eryk Sun][python-discuss-solution] for explaining the issue and provi
 handlers in Python.
 
 [python-discuss-solution]: https://discuss.python.org/t/os-kill-signals-not-being-received-correctly-alternative-is-kill-sigusr1-command/26913/6
-
 [checking-tar-progress]: https://www.gnu.org/software/tar/manual/html_section/verbose.html
