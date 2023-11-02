@@ -113,7 +113,7 @@ there's a way to check whether signal handlers have been provided or a process.
 
 On Unix systems (which is the only place you're going to find Unix signals), there's a special pseudo-filesystem that
 provides intimate details on a process. This includes things like the process's name, state, PID, memory usage, threads,
-and of course: *signal handlers*.
+and of course: _signal handlers_.
 
 See below, the contents of `/proc/<pid>/status` for a process:
 
@@ -177,8 +177,6 @@ Checking whether or not the Nth bit is set can be done with the bitwise AND oper
 If the result is non-zero, the bit is set. If the result is zero, the bit is not set.
 
 By simply polling the process's signal handlers, we can wait for the signal handler to be registered before sending the `SIGUSR1` signal.
-
-Signal handlers are typically registered quickly, and they're
 
 ### Credits
 
